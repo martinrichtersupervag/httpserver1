@@ -7,6 +7,6 @@
 import http.server
 import ssl
 
-httpd = http.server.HTTPServer(('localhost', 4443), http.server.SimpleHTTPRequestHandler)
-httpd.socket = ssl.wrap_socket(httpd.socket, certfile='c:\Prog\python\TestUtils\httpserver1\mrichter_cert.pem', server_side=True, keyfile='c:\Prog\python\TestUtils\httpserver1\mrichter_key.pem')
+httpd = http.server.HTTPServer(('localhost', 443), http.server.SimpleHTTPRequestHandler)
+httpd.socket = ssl.wrap_socket(httpd.socket, certfile='c:\Prog\python\TestUtils\httpserver1\hrcserver.pem', server_side=True, keyfile='c:\Prog\python\TestUtils\httpserver1\hrcserverkey.pem')
 httpd.serve_forever()
